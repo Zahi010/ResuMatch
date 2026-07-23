@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ResuMatch Extension</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="popup-container glass-panel">
+  <div class="logo">
+    Resu<span>Match</span>
+  </div>
+
+  <div id="loading" class="hidden" style="text-align: center; color: #9ca3af; margin-bottom: 10px;">
+    Loading...
+  </div>
+  
+  <div id="error" class="error-message hidden" style="text-align: center;">
+  </div>
+
+  <!-- Auth State -->
+  <div id="auth-state" class="auth-form hidden">
+    <input type="email" id="email" class="glass-input" placeholder="Email Address">
+    <input type="password" id="password" class="glass-input" placeholder="Password">
+    <button id="login-btn" class="glass-button">Sign In</button>
+  </div>
+
+  <!-- Logged In State -->
+  <div id="logged-in-state" class="resume-selector hidden">
+    <p style="font-size: 12px; color: #d1d5db; margin: 0; text-align: center;">Active Resume for Analysis:</p>
+    <select id="resume-select" class="glass-input">
+      <option value="">Select a Resume...</option>
+    </select>
+    <button id="logout-btn" class="glass-button" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2);">Log Out</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
