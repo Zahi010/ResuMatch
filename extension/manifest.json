@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "ResuMatch: LinkedIn ATS Matcher",
+  "version": "1.0",
+  "description": "Automatically check your ATS Match Score and Resume Compatibility directly on LinkedIn Job Postings.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.linkedin.com/*",
+    "http://localhost:8000/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.linkedin.com/*"],
+      "css": ["styles.css"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "ResuMatch Settings"
+  }
+}
